@@ -4,6 +4,10 @@
 
 ---
 
+Download the APK from the releases section!
+
+[![Watch the demo](https://img.youtube.com/vi/BG-NfswaVq4/sddefault.jpg)](https://youtu.be/BG-NfswaVq4)
+
 ## 📱 Description
 
 **AniMiru** is a modern React Native application built with TypeScript that provides a seamless front-end experience for anime streaming. This app connects to a certain website and displays its content in an elegant, intuitive way.
