@@ -4,7 +4,7 @@
 
 ---
 
-Download the APK from the releases section!
+Download the APK from the releases section! Watch the video demo below!
 
 [![Watch the demo](https://img.youtube.com/vi/BG-NfswaVq4/sddefault.jpg)](https://youtu.be/BG-NfswaVq4)
 
