@@ -1,4 +1,4 @@
-import { View, Text, ActivityIndicator, ScrollView, Animated } from 'react-native'
+import { View, Text, ActivityIndicator, ScrollView, Animated, Dimensions } from 'react-native'
 import React, { useEffect, useState, useRef } from 'react'
 import { useIsFocused } from '@react-navigation/native';
 
@@ -7,7 +7,10 @@ import { animeCardInfo } from '../interfaces';
 import { textStyles } from '../styles/textStyles';
 import { decodeHtmlEntities } from '../commonFuncs';
 
+
 const Home = () => {
+
+  const screenWidth = Dimensions.get('window').width;
 
   const dom = (globalThis as any).dom;
 
@@ -228,7 +231,7 @@ const Home = () => {
     >
       <Animated.View 
         style={{ 
-          paddingTop: 40,
+          paddingTop: 30,
           opacity: fadeAnim,
           transform: [{ translateY: translateYAnim }]
         }}
@@ -257,7 +260,7 @@ const Home = () => {
           style={{ marginBottom: 32 }}
         >
           {pop_today.current.map((anime, index) => (
-            <AnimeCard key={index} details={anime}/>
+            <AnimeCard key={index} details={anime} width_={screenWidth / 3}/>
           ))}
         </ScrollView>
 
@@ -290,7 +293,7 @@ const Home = () => {
             {latest_releases.current
               .filter((_, index) => index % 2 === 0)
               .map((anime, index) => (
-                <AnimeCard key={`latest-row1-${index}`} details={anime}/>
+                <AnimeCard key={`latest-row1-${index}`} details={anime} width_={screenWidth / 3}/>
               ))
             }
           </View>
@@ -300,7 +303,7 @@ const Home = () => {
             {latest_releases.current
               .filter((_, index) => index % 2 === 1)
               .map((anime, index) => (
-                <AnimeCard key={`latest-row2-${index}`} details={anime}/>
+                <AnimeCard key={`latest-row2-${index}`} details={anime} width_={screenWidth / 3}/>
               ))
             }
           </View>

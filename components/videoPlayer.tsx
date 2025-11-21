@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
   webviewContainer: {
-    width: '100%',
+    height: '100%',
     aspectRatio: 16 / 9,
     borderRadius: 10,
     overflow: 'hidden',

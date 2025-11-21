@@ -135,7 +135,6 @@ const BookmarkPage = () => {
           paddingBottom: 100 // Extra padding for tab bar
         }}
         columnWrapperStyle={{ 
-          justifyContent: 'space-between',
           marginBottom: 16
         }}
         ListHeaderComponent={
@@ -151,9 +150,12 @@ const BookmarkPage = () => {
             My Bookmarks ({bookmarks.length})
           </Text>
         }
-        renderItem={({ item }) => (
-          <View style={{ width: (screenWidth - 48) / 3 }}>
-            <AnimeCard details={item} />
+        renderItem={({ item, index }) => (
+          <View style={{ 
+            width: (screenWidth - 48) / 3,
+            marginRight: (index % 3 !== 2) ? 8 : 0
+          }}>
+            <AnimeCard details={item} width_={'auto'}/>
           </View>
         )}
       />

@@ -1,12 +1,12 @@
-import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity, DimensionValue } from 'react-native'
 import React from 'react'
 import Svg, { Defs, LinearGradient, Stop, Rect } from 'react-native-svg'
 import { useNavigation } from '@react-navigation/native'
 import { animeCardInfo } from '../interfaces';
 
-const screenWidth = Dimensions.get('window').width;
 
-const AnimeCard = ({details} : {details: animeCardInfo}) => {
+
+const AnimeCard = ({details, width_} : {details: animeCardInfo, width_: DimensionValue}) => {
 
     const navigation = useNavigation();
 
@@ -16,7 +16,7 @@ const AnimeCard = ({details} : {details: animeCardInfo}) => {
     
     return (
       <TouchableOpacity 
-        style={[styles.card, { width: screenWidth / 3 }]}
+        style={[styles.card, { width: width_ }]}
         onPress={handlePress}
         activeOpacity={0.7}
       >

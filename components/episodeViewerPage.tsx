@@ -39,7 +39,7 @@ const EpisodeViewerPage = () => {
       backgroundColor: '#000000',
       justifyContent: 'center',
       alignItems: 'center',
-      paddingBottom: '5%'
+      paddingBottom: '1%'
     }}>
       {/* Video Player Section */}
       <VideoPlayer currentUrl={fullUrl} />
